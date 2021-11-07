@@ -1,78 +1,245 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
+<style>
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        scroll-behavior: smooth;
+    }
+
+    .bg {
+        background: radial-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.438)), url("assets/background.jpg") center center / cover no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover, cover;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 4rem;
+    }
+
+    .bg a {
+        all: unset;
+    }
+
+    .arrow {
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-name: bounce-2;
+        animation-timing-function: ease;
+        margin-top: 50px;
+        transition: 0.5s ease-out;
+    }
+
+    .arrow:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+
+    @keyframes bounce-2 {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(20px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .header {
+        text-align: center;
+        color: white;
+        text-shadow: 0px 0px 50px black;
+        font-size: 1.5rem;
+    }
+
+    .header h1 {
+        margin-bottom: 1rem;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a:active {
+        color: rgb(136, 136, 136);
+    }
+
+    p {
+        padding: 1rem;
+    }
+
+    h2 {
+        color: #1d809f;
+    }
+
+    h3 {
+        color: #155d74;
+        margin-bottom: 0.7rem;
+        margin-top: 0;
+    }
+
+    ul li {
+        padding-bottom: 2rem;
+        padding-left: 5px;
+    }
+
+    .exclude_style {
+        all: unset;
+    }
+
+    .content {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    footer {
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+    background-color: #6c7c8b;
+    color: #fff;
+    }
+
+</style>
+
 <head>
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Philibert Cheminot</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
 
 </head>
 
-<body id="page-top" style="font-family: 'Ubuntu', sans-serif; font-size: 1.2em;">
+<body style="font-family: 'Noto-Sans', sans-serif; font-size: 1.2em;">
 
-    <div class="bg">
+    <section id="page-top" class="bg" style="font-family: 'Ubuntu', sans-serif; font-size: 2em;">
         <div class="header">
             <img src="assets/icon.png" alt="Icon" style="width: 10rem;">
-            <h1 style="text-align:center">
+            <h1 style="text-align:center; font-size: 2em;">
                 Philibert Cheminot
             </h1>
-            <h3 style="text-align:center">
-                <i>Electronics enthusiast</i>
+            <h3 style="text-align:center" class="exclude_style">
+                <i style="font-size: 1.2em;">Electronics enthusiast</i>
             </h3>
         </div>
-    </div>
+        <div>
+            <a href="#about">
+                <img src="/assets/arrow.png" class="arrow">
+            </a>
+        </div>
+    </section>
 
-    <h2>
-        <center><a id="About_me"></a>About me</center>
+    <section id="about">
+        <div class="content">
+            <h2 style="text-align: center;">
+                About me
+            </h2>
 
-    </h2>
-    <p>I am an electronics enthusiast, without much knowledge but I am curious and I like to learn. Electronics and
-        programming are complementary and I am also interested in this field. I like everything that revolves around the
-        Arduino and especially home
-        automation.
-    </p>
+            <p>I am an electronics enthusiast, without much knowledge but I am curious and I like to learn.
+                Electronics and
+                programming are complementary and I am also interested in this field.<br>I like everything that
+                revolves around the
+                Arduino and especially home
+                automation.
+            </p>
 
-    <h2>
-        <center><a id="My_most_popular_projects"></a>My most popular projects</center>
-    </h2>
+            <h2 style="text-align: center">
+                My most popular projects
+            </h2>
 
-    <ul>
-        <li>The <a href="https://philibertc.github.io/micronova_controller/" target="_blank"><b><i>MicroNova
-                        Controller</i></b></a>: this is my biggest project and clearly the most successful one,
-            over 400 people have visited the page for this one! This is a WiFi MQTT pellet stove controller, compatible
-            with over 30 different brands.
-            I have created a circuit board for this project which is very much to the satisfaction of those who have
-            purchased it.</li>
-        <li>The <b><i>Arduino Ambilight</i></b>: I am far from being the only one to have done this kind of
-            project, but in my versions I always take care to explain the steps to follow in order to do it easily at
-            home. It’s about creating a system
-            similar to Ambilight but for only $30!</li>
-        <li>More to come!</li>
-    </ul>
+            <ul>
+                <li>
+                    <h3><a href="https://philibertc.github.io/micronova_controller/" target="_blank"><b><i><u>MicroNova
+                                        Controller</u></i></b></a></h3>
 
-    <hr>
-    <p>To support me</p>
-    <ul>
-        <li><a href="https://www.tindie.com/stores/philibertc/" target="_blank">Tindie</a></li>
-        <li><a href="https://www.paypal.com/donate?hosted_button_id=Q48QBGGQTVGTG" target="_blank">PayPal</a></li>
-    </ul>
-    <p>Where to find me</p>
-    <ul>
-        <li><a href="mailto://philibert.cheminot+github@gmail.com">Email</a></li>
-        <li><a href="https://instagram.com/philibert.cheminot" target="_blank">Instagram</a></li>
-        <li><a href="https://discord.com/users/438753859750330371" target="_blank">Discord</a><br> © Philibert Cheminot,
-            2021
-        </li>
-    </ul>
-    <hr>
-    
+                    This is my biggest project and clearly the most
+                    successful one,
+                    over 400 people have visited the page for this one! This is a WiFi MQTT pellet stove controller,
+                    compatible
+                    with over 30 different brands.
+                    I have created a circuit board for this project which is very much to the satisfaction of those
+                    who have
+                    purchased it.
+
+
+                </li>
+                <li>
+                    <h3><a href="https://github.com/philibertc/adalight_ws2812b/" target="_blank"><b><i><u>Arduino
+                                        Ambilight</u></i></b></a></h3>
+
+                    I am far from being the only one to have done this
+                    kind of
+                    project, but in my versions I always take care to explain the steps to follow in order to do it
+                    easily at
+                    home. It’s about creating a system
+                    similar to Ambilight but for only $30!
+
+                </li>
+                <li>More to come!</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="content">
+            <hr>
+            <table style="margin: auto;">
+                <tr>
+                    <td>
+                        <div>
+                            <p><b>To support me</b></p>
+                            <ul>
+                                <li><a href="https://www.tindie.com/stores/philibertc/" target="_blank">Tindie</a></li>
+                                <li><a href="https://www.paypal.com/donate?hosted_button_id=Q48QBGGQTVGTG" target="_blank">PayPal</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <p><b>Where to find me</b></p>
+
+                            <ul>
+                                <li><a href="mailto://philibert.cheminot+github@gmail.com">Email</a></li>
+                                <li><a href="https://instagram.com/philibert.cheminot" target="_blank">Instagram</a></li>
+                                <li><a href="https://discord.com/users/438753859750330371" target="_blank">Discord</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>
+            © Philibert Cheminot, 2021
+        </p>
+        <a href="#page-top"><p><u>∧ Return to top ∧</u></p></a>
+    </footer>
+
 </body>
 
 </html>
