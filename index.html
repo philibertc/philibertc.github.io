@@ -1,122 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<style>
-    body,
-    html {
-        height: 100%;
-        margin: 0;
-        scroll-behavior: smooth;
-    }
-
-    .bg {
-        background: radial-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.438)), url("assets/background.jpg") center center / cover no-repeat;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover, cover;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 4rem;
-    }
-
-    .bg a {
-        all: unset;
-    }
-
-    .arrow {
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        animation-name: bounce-2;
-        animation-timing-function: ease;
-        margin-top: 50px;
-        transition: 0.5s ease-out;
-    }
-
-    .arrow:hover {
-        transform: scale(1.2);
-        cursor: pointer;
-    }
-
-    @keyframes bounce-2 {
-        0% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(20px);
-        }
-
-        100% {
-            transform: translateY(0);
-        }
-    }
-
-    .header {
-        text-align: center;
-        color: white;
-        text-shadow: 0px 0px 50px black;
-        font-size: 1.5rem;
-    }
-
-    .header h1 {
-        margin-bottom: 1rem;
-    }
-
-    a {
-        color: inherit;
-        text-decoration: none;
-    }
-
-    a:active {
-        color: rgb(136, 136, 136);
-    }
-
-    p {
-        padding: 1rem;
-    }
-
-    h2 {
-        color: #1d809f;
-    }
-
-    h3 {
-        color: #155d74;
-        margin-bottom: 0.7rem;
-        margin-top: 0;
-    }
-
-    ul li {
-        padding-bottom: 2rem;
-        padding-left: 5px;
-    }
-
-    .exclude_style {
-        all: unset;
-    }
-
-    .content {
-        max-width: 1200px;
-        margin: auto;
-    }
-
-    footer {
-        display: flex;
-        justify-content: center;
-        padding: 2px;
-        background-color: #6c7c8b;
-        color: #fff;
-    }
-</style>
-
 <head>
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Philibert Cheminot</title>
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
